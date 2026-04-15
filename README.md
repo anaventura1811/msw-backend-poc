@@ -14,14 +14,15 @@ Servidor em `http://localhost:3000`.
 ## Configuracoes (env vars)
 
 - `PORT` (default: `3000`)
-- `ALLOWED_ORIGIN` (default: `*`)
+- `CORS_ALLOWED_ORIGINS` (default: `*`) - lista separada por virgula
+- `ALLOWED_ORIGIN` (compatibilidade legado, opcional)
 - `ALLOW_CREDENTIALS` (default: `false`)
 - `ENABLE_PNA` (default: `true`)
 
 Exemplo:
 
 ```bash
-ALLOWED_ORIGIN="https://app.exemplo.com" ALLOW_CREDENTIALS=true ENABLE_PNA=true npm start
+CORS_ALLOWED_ORIGINS="http://localhost:5173,https://preview.exemplo.com,https://homolog.exemplo.com" ALLOW_CREDENTIALS=true ENABLE_PNA=true npm start
 ```
 
 ## Rotas
